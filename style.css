@@ -37,3 +37,11 @@ h1 {
     background-color: #008000;
 
 }
+
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+    background-color: #008000;
+}
