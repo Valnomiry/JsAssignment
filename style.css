@@ -1,0 +1,39 @@
+.body {
+    background-color: #F5F5F5;
+}
+
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+
+.container {}
+
+h1 {
+    font-size: 80px;
+    font-family: Impact;
+    font-weight: 900;
+}
+
+.head p {
+    font-size: 35px;
+}
+
+.head button {
+    padding: 27px 90px;
+    border-radius: 0;
+    background-color: #0000FF;
+    color: #fff;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background-color: #008000;
+
+}
