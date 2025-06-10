@@ -1,5 +1,5 @@
-.body {
-    background-color: #F5F5F5;
+body {
+    background-color: #F7ECDE;
 }
 
 
@@ -16,9 +16,100 @@ a {
 .container {}
 
 h1 {
-    font-size: 80px;
-    font-family: Impact;
-    font-weight: 900;
+    font-family: "Pacifico", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 50px;
+    line-height: 60px;
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: 1px;
+    background-color: #fec260;
+    transition: height 350ms;
+    z-index: -1;
+}
+
+h1:hover::before {
+    height: 50%;
+}
+
+
+.book-mark-container {
+    border-width: 1px 0 0 0;
+    border-style: dotted;
+    border-color: #352e28;
+
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    padding-bottom: 20px;
+    padding-top: 50px;
+    margin-top: 20px;
+}
+
+.book-mark-container h2 {
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    text-align: center;
+    position: absolute;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 25px;
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.form-control:focus {
+    border-color: #FADEB4;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+.btn-submit {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #d1512d;
+    --bs-btn-border-color: #d1512d;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #bb4120;
+    --bs-btn-hover-border-color: #a03315;
+    width: 12%;
+}
+
+.btn:hover {
+    background-color: #BB4120;
+}
+
+.submit {
+    border-width: 0 0 2px 0;
+    border-style: dotted;
+    border-color: #352e28;
+    padding-bottom: 20px;
+}
+
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+    background-color: #fff;
+    color: #000;
 }
 
 .head p {
@@ -33,15 +124,76 @@ h1 {
     font-size: 15px;
 }
 
-.btn:hover {
-    background-color: #008000;
-
+.warn-message-content {
+    width: 40%;
+    /* display: none; */
 }
 
-.btn-check:checked+.btn,
-.btn.active,
-.btn.show,
-.btn:first-child:active,
-:not(.btn-check)+.btn:active {
-    background-color: #008000;
+.warn-circle span:nth-child(1) {
+    background-color: rgb(241, 95, 93);
+}
+
+.warn-circle span:nth-child(2) {
+    background-color: rgb(254, 190, 46);
+}
+
+.warn-circle span:nth-child(3) {
+    background-color: rgb(77, 183, 72);
+}
+
+.warn-circle span {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.warn-message-content p {
+    font-family: "Bree Serif", serif;
+    font-size: 21px;
+    line-height: 1.3;
+    color: rgb(53, 46, 40);
+    font-weight: bold;
+}
+
+.close-btn {
+    border: none;
+    border-width: 0;
+    border-width: 0px !important;
+    border-style: initial !important;
+    border-color: initial !important;
+    border-image: initial !important;
+}
+
+.warn-message-content {
+    position: absolute;
+    top: -40px;
+    /* bottom: -5px; */
+}
+
+.bookmark-saved-data table {}
+
+.btn-visit {
+    border-radius: 5px;
+    background-color: #9eb23b;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.btn-delete {
+    border-radius: 5px;
+    background-color: #eb1d36;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.btn-delete:hover {
+    background-color: #BB4120;
+    color: #fff;
+}
+
+.btn-visit:hover {
+    background-color: #8A9E23;
+    color: #fff;
 }

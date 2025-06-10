@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Bookmark</title>
+    <link rel="icon" href="./image/bookmark.png">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="./style.css">
@@ -23,22 +25,81 @@
 
 
     <main class="mt-5 main">
-        <div class="container bg-body  ">
+        <div class="container  ">
 
 
 
             <div class="row">
                 <div class="col-12">
-                    <div class="head d-flex justify-content-center align-items-center flex-column">
-                        <h1 class="mb-5">Quote of the Day</h1>
-                        <p>Press the button below to recieve a random quote!</p>
-                        <button class="btn btn-dark mt-5 mb-5" onclick="getNewQuto()">New Quote</button>
-                        <p class="text-center" id="quote"></p>
-                        <p id="quoteAuthor"></p>
+                    <div class="head d-flex justify-content-center align-items-center flex-column ">
+                        <h1 class="mb-5 position-relative">Bookmarker</h1>
+
                     </div>
 
                 </div>
+
             </div>
+
+            <div class=" book-mark-container">
+
+                <h2><i class="fa-solid fa-bookmark"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark"></i>
+                </h2>
+            </div>
+            <div class="  d-flex justify-content-center align-items-center position-relative ">
+                <div class="warn-message-content bg-body ps-4 pt-4 pe-4 m-5 rounded-1 " id="warnMessageContent">
+                    <div class="warn-message-header d-flex justify-content-between">
+                        <div class="warn-circle d-flex pb-5">
+                            <span class="rounded-circle me-2"></span>
+                            <span class="rounded-circle me-2"></span>
+                            <span class="rounded-circle me-2"></span>
+                        </div>
+                        <div class="close-message pb-5">
+                            <button id="close-btn btn " onclick="closeMessage()"><i
+                                    class="fa-solid fa-xmark close fs-3"></i></button>
+                        </div>
+                    </div>
+                    <p>Site Name or Url is not valid, Please follow the rules below :</p>
+                    <ol class="list-unstyled ">
+                        <li class="fs-5 fw-normal"> <i class="fa-regular fa-circle-right p-2"></i> Site name
+                            must
+                            contain at least 3 characters
+                        </li>
+                        <li class="fs-5 fw-normal"> <i class="fa-regular fa-circle-right p-2"></i> Site URL must be a
+                            valid one
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="book-input-data w-100 mt-5 d-flex flex-column">
+                <label for="siteName" class="mb-3 fw-bold "> <i class="fa-solid fa-book-bookmark mx-2"></i>Site
+                    Name</label>
+                <input type="text" id="siteName" class="form-control rounded-2 py-2 mb-3 " placeholder="Bookmark Name"
+                    oninput="isValidName(this.value)">
+
+                <label for="url" class="mb-3 fw-bold "> <i class="fa-solid fa-link  mx-2"></i>Site
+                    Name</label>
+                <input type="text" id="url" class="form-control rounded-2 py-2 " placeholder="Website Url"
+                    oninput="isValidURL(this.value)">
+                <div class="submit d-flex justify-content-center align-items-center">
+                    <button id="saveBtn" class="btn btn-submit  py-2 mt-4 " onclick="saveSite() ">Submit</button>
+                </div>
+            </div>
+            <div class="bookmark-saved-data mt-4">
+                <table class="table bookmark-table   text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">Index</th>
+                            <th scope="col">Website Name</th>
+                            <th scope="col">Visit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </main>
 
