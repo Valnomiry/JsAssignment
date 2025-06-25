@@ -108,7 +108,7 @@ function sign() {
 
 
 function loadData() {
-    if (!localStorage.getItem('siteList'))
+    if (!localStorage.getItem('userList'))
         return;
 
     userList = JSON.parse(localStorage.getItem('userList'));
