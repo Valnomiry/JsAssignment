@@ -45,9 +45,9 @@ async function getWaetherData(search = '') {
 
         console.log('currentLocation:' + currentLocation);
 
-        console.log('url:' + `http://api.weatherapi.com/v1/forecast.json?key=33079935279d41dbb4e61533252306${currentLocation}&days=3`);
+        console.log('url:' + `https://api.weatherapi.com/v1/forecast.json?key=33079935279d41dbb4e61533252306${currentLocation}&days=3`);
 
-        let data = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=33079935279d41dbb4e61533252306${currentLocation}&days=3`)
+        let data = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=33079935279d41dbb4e61533252306${currentLocation}&days=3`)
         console.log('data:', data);
 
         data = await data.json();
