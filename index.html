@@ -9,6 +9,8 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./style.css">
     <!-- <link rel="stylesheet" href="./media.css"> -->
 
@@ -16,75 +18,99 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class="" cz-shortcut-listen="true">
 
 
 
 
-    <!-- header background -->
+    <div class="site-content">
+        <div class="site-header">
+            <div class="container">
+                <a class="branding" href="/">
+                    <img src="https://routeweather.netlify.app/images/logo@2x.png" alt="" class="logo" width="64"
+                        height="38">
+                    <div class="logo-type">
+                        <h1 class="site-title">Weather</h1>
+                        <small class="site-description">tagline goes here</small>
+                    </div>
+                </a>
 
+                <!-- Default snippet for navigation -->
+                <div class="main-navigation">
+                    <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+                    <ul class="menu">
+                        <li class="menu-item current-menu-item"><a href="/">Home</a></li>
+                        <li class="menu-item"><a href="#">News</a></li>
+                        <li class="menu-item"><a href="#">Live cameras</a></li>
+                        <li class="menu-item"><a href="#">Photos</a></li>
+                        <li class="menu-item"><a href="/contact.html">Contact</a></li>
+                        <!-- <li class="menu-item"><a href="#">Contact</a></li> -->
+                    </ul> <!-- .menu -->
+                </div> <!-- .main-navigation -->
 
-    <main class=" main">
-
-
-        <nav class="navbar navbar-expand-lg home d-none">
-            <div class="container-fluid">
-                <a class="navbar-brand text-white" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-dark navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-outline-warning" aria-current="page" href="#" id="logoutBtn"
-                                onclick="logout()">Logout</a>
-                        </li>
-
+                <div class="mobile-navigation">
+                    <ul class="menu">
+                        <li class="menu-item current-menu-item"><a href="index.html">Home</a></li>
+                        <li class="menu-item"><a href="#">News</a></li>
+                        <li class="menu-item"><a href="#">Live cameras</a></li>
+                        <li class="menu-item"><a href="#">Photos</a></li>
+                        <li class="menu-item"><a href="#" id="contact" onclick="contact()">Contact</a></li>
                     </ul>
-
-                </div>
-            </div>
-        </nav>
-        <div class="container  text-center ">
-
-
-
-            <div class="user-info p-5 w-75     login d-none home" id="home">
-                <div class="login-content main-color  d-flex flex-column justify-content-center align-items-center">
-                    <h2 id="userName">Welcome </h2>
-                </div>
-            </div>
-
-
-            <div class="login p-5 w-75  m-auto" id="login">
-                <div class="login-content main-color  d-flex flex-column justify-content-center align-items-center">
-                    <h2>Smart Login System</h2>
-                    <input type="text" name="name" id="name" class="form-control my-3 text-white d-none"
-                        placeholder="Enter your name">
-                    <input type="email" name="email" id="email" class="form-control my-3 text-white"
-                        placeholder="Enter your email">
-                    <input type="password" name="password" id="password" class="form-control my-3 text-white"
-                        placeholder="Enter your password">
-                    <p class="incorrect text-danger  d-none"><span class="text-danger m-3">All inputs is required</span>
-                    </p>
-                    <button onclick="login()" class="btn btn-outline-info w-100 my-3" id="btnLogin">Login</button>
-                    <p class="text-white">
-                        Don’t have an account?
-                        <a class="text-white " onclick="sign()" href="#" id="signIn">Sign Up</a>
-                    </p>
                 </div>
 
             </div>
+        </div> <!-- .site-header -->
 
+        <div class="hero" data-bg-image="image/banner.png" style="background-image: url(&quot;image/banner.png&quot;);">
+            <div class="container">
+                <form class="find-location">
+                    <input type="text" placeholder="Find your location..." id="search" fdprocessedid="8i3tti">
+                    <input type="button" value="Find" id="submit" fdprocessedid="pvzte9">
+                </form>
+
+            </div>
+        </div>
+        <div class="forecast-table">
+            <div class="container">
+                <div class="forecast-container" id="forecast">
+
+                </div>
+            </div>
         </div>
 
 
 
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <form action="#" class="subscribe-form">
+                            <input type="text" placeholder="Enter your email to subscribe..." fdprocessedid="en0ilj">
+                            <input type="submit" value="Subscribe" fdprocessedid="jdgr7p">
+                        </form>
+                    </div>
+                    <div class="col-md-3 col-md-offset-1">
+                        <div class="social-links">
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-twitter"></i></a>
+                            <a href="#"><i class="bi bi-google"></i></a>
+                            <a href="#"><i class="bi bi-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
 
-        </div>
-    </main>
+                <p class="colophon">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+            </div>
+        </footer> <!-- .site-footer -->
+    </div>
+
+
+
+
+
+
+
+
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
