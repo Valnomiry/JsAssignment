@@ -180,3 +180,4 @@ function showWeather() {
 
 getWaetherData(gcurrentLocation);
 
+
